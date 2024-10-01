@@ -4,11 +4,11 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
 #SBATCH --partition=cpu
-#SBATCH --mem=32G
-#SBATCH --time=6:00:00
+#SBATCH --mem=64G
+#SBATCH --time=8:00:00
 #SBATCH --account=cpr_nilsson  
 ## Optional info 
-#SBATCH --job-name=Bean_Emil_ABE     # Job name
+#SBATCH --job-name=BEAN_nilsson     # Job name
 #SBATCH --output=output-%j.log    # Output file
 #SBATCH --error=error-%j.log      # Error file
 

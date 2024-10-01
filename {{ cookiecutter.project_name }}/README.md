@@ -12,24 +12,24 @@ Folder structure (extended version)
 -------
 
 ```plaintext
-Project_name/
+{{ cookiecutter.project_name }}
+├── input
+│   ├── data
+│   └── metafiles
+│       ├── {{ cookiecutter.project_slug }}_gene_symbols.txt
+│       ├── {{ cookiecutter.project_slug }}_guide_list.csv
+│       └── {{ cookiecutter.project_slug }}_sample_list.csv
+├── metadata.yml
+├── notebooks
+├── output
+│   ├── count
+│   ├── filter
+│   ├── profile
+│   ├── qc
+│   └── results
 ├── README.md
-├── data (symbolic link)
-│   ├── raw/
-│   └── processed/
-├── docs/
-│   └── metadata.yml
-├── notebooks/
-├── pipeline/
-│   └── rules/
-├── results/
-│   ├── figures/
-│   └── tables/
-├── reports/
-│   ├── errors/
-│   └── outputs/
-├── scratch/
-└── scripts/
+└── scripts
+    └── run_bean_{{ cookiecutter.project_slug }}.sh
 ```
 
 Credits
