@@ -1,0 +1,10 @@
+﻿R1_filepath,R2_filepath,sample_id,replicate,condition,time
+data/U268_pLib017_T0_1_S1_R1_001_filtered.fastq.gz,data/U268_pLib017_T0_1_S1_R2_001_filtered.fastq.gz,rep1_D0,rep1,D0,0
+data/U268_pLib017_T0_2_S2_R1_001_filtered.fastq.gz,data/U268_pLib017_T0_2_S2_R2_001_filtered.fastq.gz,rep2_D0,rep2,D0,0
+data/U268_pLib017_T0_3_S3_R1_001_filtered.fastq.gz,data/U268_pLib017_T0_3_S3_R2_001_filtered.fastq.gz,rep3_D0,rep3,D0,0
+data/U268_pLib017_T2_1_S16_R1_001_filtered.fastq.gz,data/U268_pLib017_T2_1_S16_R2_001_filtered.fastq.gz,rep1_D2,rep1,D2,2
+data/U268_pLib017_T2_2_S17_R1_001_filtered.fastq.gz,data/U268_pLib017_T2_2_S17_R2_001_filtered.fastq.gz,rep2_D2,rep2,D2,2
+data/U268_pLib017_T2_3_S18_R1_001_filtered.fastq.gz,data/U268_pLib017_T2_3_S18_R2_001_filtered.fastq.gz,rep3_D2,rep3,D2,2
+data/U268_pLib017_T16_1_S31_R1_001_filtered.fastq.gz,data/U268_pLib017_T16_1_S31_R2_001_filtered.fastq.gz,rep1_D16,rep1,D16,16
+data/U268_pLib017_T16_2_S32_R1_001_filtered.fastq.gz,data/U268_pLib017_T16_2_S32_R2_001_filtered.fastq.gz,rep2_D16,rep2,D16,16
+data/U268_pLib017_T16_3_S33_R1_001_filtered.fastq.gz,data/U268_pLib017_T16_3_S33_R2_001_filtered.fastq.gz,rep3_D16,rep3,D16,16
