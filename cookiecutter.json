@@ -5,9 +5,13 @@
   "date": "{% now 'utc', '%Y%m%d' %}",
   "short_description": "",
   "version": "0.1.0",
+  "project_dir": "{{ '.' | abspath }}/{{ cookiecutter.project_slug }}/the_file",
   "create_author_file": "y",
+  "_extensions": [
+    "jinja2_ospath.extensions.OSPathExtension"
+  ],
   "__prompts__": {
-    "project_name": "Project directory name [Example: project_short_description_202X]",
+    "project_name": "Pretty project name [Example: screenname_BaseEditor_yy_mm,  ActivEdit_TadDE_24_10]",
     "author": "Author of the project",
     "date": "Date of project creation, default is today's date",
     "short_description": "Provide a detailed description of the project (context/content)"
