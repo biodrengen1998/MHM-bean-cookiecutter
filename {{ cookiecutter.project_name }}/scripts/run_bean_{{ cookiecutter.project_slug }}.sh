@@ -20,7 +20,7 @@
 
 screen_id={{ cookiecutter.project_slug }}
 working_dir={{ cookiecutter.project_dir }}             # absolute path of working directory (use pwd)
-output_dir=output1      # output path, replace name
+output_dir=output      # output path, replace name
 sample_list=input/metafiles/${screen_id}_sample_list.csv
 guide_list=input/metafiles/${screen_id}_guide_list.csv
 reporter_length=32
@@ -70,8 +70,9 @@ python calc_guide_edits.py $working_dir $screen_id $output_dir/count -c $control
 # ####################################################################################################
 # ### Bean profile
 
-bean profile $working_dir/${output_dir}/bean_count_${screen_id}_wedits.h5ad --pam-col '5-nt PAM' \
-    --control-condition=$control_condition
+bean profile $working_dir/${output_dir}/count/bean_count_${screen_id}_wedits.h5ad --pam-col '5-nt PAM' \
+    --control-condition=$control_condition \
+    -o $working_dir/${output_dir}/profile
 
 ####################################################################################################
 ### Bean qc
