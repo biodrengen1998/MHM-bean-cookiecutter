@@ -9,8 +9,8 @@
 #SBATCH --account=cpr_nilsson  
 ## Optional info 
 #SBATCH --job-name=BEAN_nilsson     # Job name
-#SBATCH --output=output-%j.log    # Output file
-#SBATCH --error=error-%j.log      # Error file
+#SBATCH --output={{ cookiecutter.project_dir }}/log/output-%j.log    # Output file
+#SBATCH --error={{ cookiecutter.project_dir }}/log/error-%j.log      # Error file
 
 
 #####################################################################
@@ -30,7 +30,7 @@ barcode_start_seq=GTTTGAATTCGC
 control_condition=D0
 lfc_cond1=D0
 lfc_cond2=D16
-gene_symbols_file=input/metafiles/${screen_id}_gene_symbols.csv
+gene_symbols_file=input/metafiles/${screen_id}_gene_symbols.txt
 
 cd $working_dir
 ###############################################
@@ -48,7 +48,7 @@ conda activate beanmads
 
 bean count-samples \
     -i "$working_dir/$sample_list" \
-    -b A \
+    -b {{ cookiecutter.edited_bases }} \
     -f "$working_dir/$guide_list" \
     -o "$output_dir/count" \
     -r \
@@ -70,7 +70,7 @@ python calc_guide_edits.py $working_dir $screen_id $output_dir/count -c $control
 # ####################################################################################################
 # ### Bean profile
 
-bean profile $working_dir/${output_dir}/count/bean_count_${screen_id}_wedits.h5ad --pam-col '5-nt PAM' \
+bean profile $working_dir/${output_dir}/count/bean_count_${screen_id}.h5ad --pam-col '5-nt PAM' \
     --control-condition=$control_condition \
     -o $working_dir/${output_dir}/profile
 
@@ -78,7 +78,7 @@ bean profile $working_dir/${output_dir}/count/bean_count_${screen_id}_wedits.h5a
 ### Bean qc
 
 bean qc \
-  ${output_dir}/count/bean_count_${screen_id}_wedits.h5ad            `# Input ReporterScreen .h5ad file path` \
+  ${output_dir}/count/bean_count_${screen_id}.h5ad            `# Input ReporterScreen .h5ad file path` \
   -o ${working_dir}/${output_dir}/qc/${screen_id}_masked.h5ad `# Output ReporterScreen .h5ad file path` \
   -r ${working_dir}/${output_dir}/qc/${screen_id}_qc_report_${screen_id} \
   --lfc-conds $lfc_cond1,$lfc_cond2 \

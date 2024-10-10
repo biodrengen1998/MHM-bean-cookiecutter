@@ -7,6 +7,7 @@
   "version": "0.1.0",
   "project_dir": "{{ '.' | abspath }}/{{ cookiecutter.project_slug }}",
   "create_author_file": "y",
+  "edited_bases": "A,C",
   "_extensions": [
     "jinja2_ospath.extensions.OSPathExtension"
   ],
@@ -14,6 +15,7 @@
     "project_name": "Pretty project name [Examples: screenname_BaseEditor_yy_mm , ActivEdit_TadDE_24_10]",
     "author": "Author of the project",
     "date": "Date of project creation, default is today's date",
-    "short_description": "Provide a detailed description of the project (context/content)"
+    "short_description": "Provide a detailed description of the project (context/content)",
+    "edited_bases": "Edited bases in screen used in the project, comma delimeted, e.g. A or A,C, default is A,C"
   }
 }
