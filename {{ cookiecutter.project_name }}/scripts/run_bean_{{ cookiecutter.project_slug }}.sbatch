@@ -62,10 +62,6 @@ bean count-samples \
     --skip-filtering         #reads generally come prefiltered from the platform, this skips. are you unsure, remove it and the "\" in the above line
 
 
-# ####################################################################################################
-# Python script to calculate guide edits (will be implemented in bean future)
-python calc_guide_edits.py $working_dir $screen_id $output_dir/count -c $control_condition
-
 
 # ####################################################################################################
 # ### Bean profile
